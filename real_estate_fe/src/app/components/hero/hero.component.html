@@ -1,0 +1,47 @@
+<div  class="hero-wrap" style="height: 100vh;"
+[style.backgroundImage]="'url(' + getHeroImage() + ')'"
+data-stellar-background-ratio="0.5" 
+*ngIf="checkRoute().split(';')[0] !='/listing' && checkRoute().split('/')[1] !='listbycity'"
+>
+    <!-- <div class="overlay"></div>
+    <div class="overlay-2"></div> -->
+
+
+    <div class="container" >
+    <div class="row no-gutters slider-text justify-content-center align-items-center" >
+      <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-end" >
+        <div class="text text-center w-100">
+        
+            <!--    home page header        -->
+        <h1 *ngIf="checkRoute()=='/'" class="mb-4 catch" [ngStyle]="{color: checkRoute()=='/' ? 'black' : 'white' }" ><b>Find Properties</b> <br>That Make You Money</h1>
+        <!-- <p *ngIf="checkRoute()=='/'"  ><a routerLink="/search" routerLinkActive="router-link-active"  class="btn btn-primary py-3 px-4">Search Properties</a></p> -->
+       
+        <!--    search page header        -->
+        <h1 *ngIf="checkRoute()=='/search'" style="color:#f1da0e;" class="mb-4 catch"> <b>Find Your Properties</b></h1>
+           
+            <!--    about page header        -->
+            <h1 *ngIf="checkRoute()=='/about'" style="color: black;" class="mb-4 catch"> <b>About Us</b></h1>
+
+
+            <!--    latest page header        -->
+            <h1 *ngIf="checkRoute()=='/latest'" style="color: #f1da0e;" class="mb-4 catch"> <b>Latest Propereties</b></h1>
+
+
+       
+      </div>
+      </div>
+    </div>
+    </div>
+    <div class="mouse">
+        <div class="mouse-icon">
+          <div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
+        </div>
+      </div>
+  </div>
+
+
+   <div class="hero-wrap" *ngIf="checkRoute().split(';')[0] =='/listing'" style="background-color: white;height: 100px; margin-top: 100px;display: flex;align-items: center;"> 
+    
+    
+    
+    <div class="container"><h1 style="color: #D4CA68;">Properety Listing</h1></div></div>

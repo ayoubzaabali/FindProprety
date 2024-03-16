@@ -1,0 +1,40 @@
+<div (click)="handle()" class="property-wrap ftco-animate" style="cursor: pointer;" (mouseover)="handleEventMouseIn($event)" (mouseout)="handleEventMouseOut($event)">
+      <div class="img d-flex align-items-center justify-content-center" 
+          [style.backgroundImage]="'url(../assets/images/' + properety.frontPhoto + ')'"
+          >
+          
+        <a  (click)="handle()" class="icon d-flex align-items-center justify-content-center btn-custom">
+          <span class="ion-ios-link"></span>
+        </a>
+      </div>
+
+
+      <div class="text">
+
+        <div *ngIf="properety.for_rent==0" style="color: orange;"><b>For Sale</b></div>
+        <div *ngIf="properety.for_rent!=0" style="color: orange;"><b>For Rent</b></div>
+
+        <p class="price mb-3"><span class="orig-price">${{properety.price}}<small>/mo</small></span></p>
+
+        <h3 class="mb-0"><a class="mydesc" (click)="handle()" >{{properety.description}}</a></h3>
+
+        <span class="location d-inline-block mb-3"><i class="ion-ios-pin mr-2"></i>{{properety.adress}}</span>
+        <ul class="property_list">
+          <li>
+             
+            <span>{{properety.bedrooms}}</span>
+            <fa-icon [icon]="faBedPulse"></fa-icon>
+            
+        
+        </li>
+
+          <li> 
+            <span>{{properety.bathrooms}}</span>
+            <fa-icon [icon]="faBathtub"></fa-icon>
+        
+        
+        </li>
+        </ul>
+      </div>
+    </div>
+  

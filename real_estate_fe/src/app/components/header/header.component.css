@@ -1,0 +1,18 @@
+#ftco-navbar{
+    box-shadow: -2px 23px 62px -10px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -2px 23px 62px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 23px 62px -10px rgba(0,0,0,0.75);
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item.active > a{
+    color: #d4ca68 !important;
+}
+
+ul li:hover,.container a:hover{
+    opacity: .5;
+    color: #D4CA68 !important ;
+}
+
+.container a:hover{
+    color: white !important;
+}

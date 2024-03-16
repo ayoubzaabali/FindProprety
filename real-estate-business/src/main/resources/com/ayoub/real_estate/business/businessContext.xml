@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        ">
+
+
+ <context:annotation-config/> 
+ <context:component-scan base-package="com.ayoub.real_estate.business"></context:component-scan>
+
+      <bean id="dataSourceConfiguration" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="location" value="classpath:/conf/real-estate.properties"/>
+    </bean>
+
+    <bean id="dataSourceP"
+          class="org.apache.commons.dbcp2.BasicDataSourceFactory"
+          factory-method="createDataSource"
+          destroy-method="close">
+        <constructor-arg ref="dataSourceConfiguration"/>
+    </bean>
+    
+    
+    
+       <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean" >
+        <property name="targetClass" value="com.ayoub.real_estate.business.factory.ContextFactory"/>
+        <property name="targetMethod" value="setDataSource"/>
+        <property name="arguments" ref="dataSourceP"/>
+    </bean>
+
+      <tx:annotation-driven />
+
+
+ 
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+    <property name="dataSource" ref="dataSourceP"/>
+    </bean>
+    
+    
+
+
+
+
+
+
+
+
+
+</beans>

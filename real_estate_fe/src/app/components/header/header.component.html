@@ -1,0 +1,23 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar"  >
+  <div class="container">
+    <a class="navbar-brand" routerLink="/" [ngStyle]="{'color': getColor()}">FindProprety</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="oi oi-menu"></span> Menu
+    </button>
+
+    <div class="collapse navbar-collapse" id="ftco-nav">
+    <ul class="navbar-nav ml-auto"  >
+      <li class="nav-item" [ngClass]="{active: checkRoute()=='/'}" ><a [ngStyle]="{'color': getColor()}" routerLink="/" class="nav-link">Home</a></li>
+      <li class="nav-item" [ngClass]="{active: checkRoute()=='/about'}" ><a [ngStyle]="{'color': getColor()}" routerLink="/about" class="nav-link">About</a></li>
+      <li class="nav-item"  [ngClass]="{active: checkRoute()=='/search'}" ><a [ngStyle]="{'color': getColor()}" routerLink="/search"   class="nav-link">Search</a></li>
+      <li class="nav-item" [ngClass]="{active: checkRoute()=='/latest'}" ><a [ngStyle]="{'color': getColor()}" routerLink="/latest"  class="nav-link">Latest Propereties</a></li>
+      <li class="nav-item" [ngClass]="{active: checkRoute()=='/contact'}" ><a [ngStyle]="{'color': getColor()}" routerLink="/contact"class="nav-link">Contact</a></li>
+    </ul>
+    </div>
+  </div>
+  </nav>
+<!-- END nav -->
+
+
+<app-hero></app-hero>

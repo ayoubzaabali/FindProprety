@@ -1,0 +1,53 @@
+version: "3.9"
+services:
+    backend:
+        image: backend
+        container_name: backend
+        build:
+            context: .
+        ports:
+            - "9090:9090"
+        depends_on:
+            - mariadb
+    frontend:
+        image: real_estate_fe
+        container_name: real_estate_fe
+        build:
+            context: ./real_estate_fe
+        ports:
+            - "4200:80"
+        # volumes:
+            # - /real-real_estate_fe/dist/real_estate_fe/:/usr/share/nginx/html/
+        depends_on:
+            - backend
+
+    mariadb:
+       image: mariadb:10.4.32
+       container_name: real_estate_db
+       restart: always
+       environment:
+         MYSQL_DATABASE: 'real_estate'
+         MYSQL_ROOT_PASSWORD: 'admin'
+         MYSQL_ROOT_HOST: '%'
+       ports:
+         - '3306:3306'
+       expose:
+         - '3306'
+       volumes:
+         - ./db:/docker-entrypoint-initdb.d
+         - mariadb:/var/lib/mysql
+
+    phpmyadmin:
+     image: phpmyadmin/phpmyadmin
+     container_name: pma
+     links:
+      - mariadb
+     environment:
+       PMA_HOST: mariadb
+       PMA_PORT: 3306
+       PMA_ARBITRARY: 1
+     restart: always
+     ports:
+      - 8081:80
+volumes:
+  mariadb:

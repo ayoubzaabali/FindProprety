@@ -1,0 +1,98 @@
+
+<section *ngIf="latest!==true && !city_id" class="ftco-section ftco-no-pb">
+    <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+            <div class="search-wrap-1 ftco-animate">
+              <form action="#" class="search-property-1">
+            <div class="row">
+              <div class="col-lg align-items-end">
+                <div class="form-group">
+                  <label for="#">Location</label>
+                  <div class="form-field">
+                    <div class="select-wrap">
+                <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                <select name="city" id="city" class="form-control">
+                  <option value="0">City</option>
+                    <option *ngFor="let city of cities" [value]="city.id">{{city.label}}</option>
+                </select>
+              </div>
+                </div>
+              </div>
+              </div>
+              <div class="col-lg align-items-end">
+                <div class="form-group">
+                  <label for="#">Property Type</label>
+                  <div class="form-field">
+                    <div class="select-wrap">
+                <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                <select name="nature" id="nature" class="form-control">
+                  <option value="0">Type</option>
+                <option *ngFor="let type of types" [value]="type.id">{{type.label}}</option>
+                
+                </select>
+              </div>
+                </div>
+              </div>
+              </div>
+              <div class="col-lg align-items-end">
+                <div class="form-group">
+                  <label for="#">Property Status</label>
+                  <div class="form-field">
+                    <div class="select-wrap">
+                <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                <select name="" id="for_rent" class="form-control">
+                <option  value="2">Type</option>
+                <option value="1">For Rent</option>
+                <option value="0">For Sale</option>
+                </select>
+              </div>
+                </div>
+              </div>
+              </div>
+              <div class="col-lg align-items-end">
+                <div class="form-group">
+                    <label for="#">Max Price</label>
+                  <div class="form-field">
+                      <div class="icon"><span class="ion-ios-search"></span></div>
+                <input  id="price" type="text" class="form-control" placeholder="Maximum Price in $">
+              </div>
+          </div>
+              </div>
+              <div class="col-lg align-self-end">
+                <div class="form-group">
+                  <div class="form-field">
+                <input type="submit" (click)="handle()" value="Search Property" class="form-control btn btn-primary">
+                </div>
+              </div>
+              </div>
+            </div>
+          </form>
+        </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+
+<div *ngIf="city_id" class="container"><h1 style="color: rgb(212, 202, 104);" [ngStyle]="{'margin-top': city_id ? '150px' : '' }">List of Propreties in {{getcitylabel()}} </h1></div>
+<section class="ftco-section goto-here" [ngStyle]="{'margin-top': city_id ? '10px' : '' }">
+    <div class="container">
+      <div *ngIf="latest==true" class="row justify-content-center">
+      <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+        <span class="subheading"></span>
+      <h2 class="mb-2"  >Latest Propereties</h2>
+      </div>
+    </div>
+
+    <p *ngIf="latest!=true && propreties.length==0 && !city_id"><b style="color: red;">filter is empty OR No items available now</b></p>
+    <p *ngIf="city_id && propreties.length==0"><b style="color: red;">No Propereties Available Now In {{getcitylabel()}}</b></p>
+
+    <div class="row">
+        <div class="col-md-4"
+        *ngFor="let properety of propreties"
+        
+        ><app-proprety-item [properety]="properety"></app-proprety-item></div>
+    </div>
+    </div>
+  </section>
