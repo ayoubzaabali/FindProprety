@@ -11,8 +11,11 @@ A complete stack for running Spring/Spring boot & Angular 16 App into Docker con
 # List of  containers:
 
 - `real_estate_fe`, the one that runs the build of Angular APP in a container with Nginx.
+  
 - `backend`, this container is running the business logic using spring JDBC and SQL queries & rest API, this container contains 3 modules (business, modules, rest)
+  
 - `mariadb` storing the MariaDB database Tables.
+  
 - `phpmyadmin` handles the administration of MariaDB.
 
 # Application Structure
@@ -22,7 +25,9 @@ A complete stack for running Spring/Spring boot & Angular 16 App into Docker con
 ### The application has 3 maven modules :
 
 - `real-estate-modules`: contains the entities of the app, this part is developed only using Spring Framework
+  
 - `real-estate-business`: contains the business logic of the app, it imports the code of the 'real-estate-modules' module so we can use all the entities here, this part is also developed only using Spring Framework
+  
 - `real-estate-rest`: contains the REST API endpoints and is connected directly to the other maven modules(business,modules), this part is developed using Spring Boot / Spring MVC
 
 
