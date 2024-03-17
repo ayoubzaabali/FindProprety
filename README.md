@@ -13,7 +13,7 @@ Real Estate applications using a Complete Stack for Running Spring/Spring boot &
 
 - `real_estate_fe`, the one that runs the build of Angular APP in a container with Nginx.
   
-- `backend`, this container is running the business logic using spring JDBC and SQL queries & rest API, this container contains 3 modules (business, modules, rest)
+- `backend`, this container is running the business logic using spring JDBC  & rest API, this container contains 3 modules (business, modules, rest)
   
 - `mariadb` storing the MariaDB database Tables.
   
