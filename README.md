@@ -6,7 +6,7 @@
 
 # Description 
 
-Real Estate applications using a Complete Stack for Running Spring/Spring boot & Angular 16 App into Docker containers using the docker-compose tool, with an Nginx server running the front and Tomcat server in the back (connected to the DB container).
+Real Estate applications using a Complete Stack for Running Spring/Spring boot & Angular 16 App into Docker containers using the docker-compose tool, with an Nginx server running the front and a Tomcat server in the back (connected to the DB container).
 
 
 # List of  containers:
@@ -64,8 +64,11 @@ Real Estate applications using a Complete Stack for Running Spring/Spring boot &
    and you will see the running containers.
    
 5. if everything went well:
+   
    - test the app on http://localhost:4200/
+     
    - PHPMyAdmin: http://localhost:8081/ (username: root, password: admin)
+     
    - the database name is 'real_estate'
 
 
