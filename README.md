@@ -15,7 +15,7 @@ A complete stack for running Spring/Spring boot & Angular 16 App into Docker con
 - `mariadb` storing the MariaDB database Tables.
 - `phpmyadmin` handles the administration of MariaDB.
 
-## starting the app ⌨
+## Testing ⌨
 
 0. You need **docker** and **docker-compose** where you are going to launch this so if you do not have it... refer to this link [HERE]([https://github.com/Inushin/dockerAngularNginxNodePostgreSQL#installing-docker-and-docker-compose-](https://docs.docker.com/engine/install/))
 
@@ -24,10 +24,23 @@ A complete stack for running Spring/Spring boot & Angular 16 App into Docker con
    git clone https://github.com/ayoubzaabali/FindProprety
    ```
 
-3. Run `docker-compose up` to check that everything runs correctly. If there are no errors, stop (`ctrl+C`) and delete containers with `docker-compose down`. Now you can run it with `docker-compose up -d`. This will run the container logs in the background.
+2. Run `docker-compose up` to check that everything runs correctly Run :
+   ```
+   docker-compose up
+   ```  
 
-4. To check that everything is running correctly in the background, run `docker-compose ps -a` and you will see the running containers.
+3. If there are no errors, stop (`ctrl+C`) and delete containers with :
+   ```
+   docker-compose up -d
+   ```  
+  This will run the container logs in the background.
+   
 
+8. To check that everything is running correctly in the background, run:
+   ```
+   docker-compose ps -a
+   ```
+   and you will see the running containers.
 
 
 
