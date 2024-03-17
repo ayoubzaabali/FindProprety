@@ -1,4 +1,4 @@
-# 🐳 Docker + Spring/Spring boot +  Angular 16 + Nginx + Mariadb 🐳
+# 🐳 Docker + Spring/Spring boot +  Angular 16 + Nginx + Mariadb
 
 ![stack](https://github.com/ayoubzaabali/FindProprety/assets/78790570/58187b1b-616a-429e-b04c-38f01717a6ee)
 
@@ -10,12 +10,12 @@
 
 A complete stack for running builded Spring/Spring boot Angular 16 App into Docker containers using docker compose tool, with a proxy Nginx between front and back (conected to the DB container).
 
-It is composed by 4 containers:
+# It is composed of 4 containers:
 
-- `real_estate_fe`, the one that runs the builded Angular APP in a container with Nginx.
-- `backend`, a container with node runing and the spring jdbc queries connected to the "mariadb" container & rest API , this container contains 4 modules
+- `real_estate_fe`, the one that runs the build of Angular APP in a container with Nginx.
+- `backend`, this container is running the business logic using spring JDBC and SQL queries & rest API, this container contains 3 modules (business, modules, rest)
 - `mariadb` storing the MariaDB database Tables.
-- `phpmyadmin` handle the administration of MySQL over the Web.
+- `phpmyadmin` handles the administration of MySQL over the Web.
 
 ## Installation ⌨
 
