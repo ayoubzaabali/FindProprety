@@ -4,7 +4,7 @@
 
 
 
-# Description 📋
+# Description 
 
 A complete stack for running Spring/Spring boot & Angular 16 App into Docker containers using the docker-compose tool, with a proxy Nginx between front and back (connected to the DB container).
 
@@ -15,7 +15,13 @@ A complete stack for running Spring/Spring boot & Angular 16 App into Docker con
 - `mariadb` storing the MariaDB database Tables.
 - `phpmyadmin` handles the administration of MariaDB.
 
-# Testing ⌨
+# Application Structure
+##spring/spring boot
+![structure](https://github.com/ayoubzaabali/FindProprety/assets/78790570/8cc57bdf-63ff-48c4-87fd-506e2da57b06)
+
+  
+
+# Testing
 
 0. You need **docker** and **docker-compose** where you are going to launch this so if you do not have it... refer to this link [HERE]([https://github.com/Inushin/dockerAngularNginxNodePostgreSQL#installing-docker-and-docker-compose-](https://docs.docker.com/engine/install/))
 
