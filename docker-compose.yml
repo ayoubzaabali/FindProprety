@@ -5,10 +5,19 @@ services:
         container_name: backend
         build:
             context: .
+        # networks: 
+        #   - mysql-db
         ports:
             - "9090:9090"
-        depends_on:
-            - mariadb
+        restart: on-failure
+        environment:
+          - DATABASE_HOST=mariadb
+          - DATABASE_USER=root
+          - DATABASE_NAME=real_estate
+          - DATABASE_PORT=3306
+          - DATABASE_PASSWORD=admin
+    
+    
     frontend:
         image: real_estate_fe
         container_name: real_estate_fe
@@ -20,19 +29,19 @@ services:
             # - /real-real_estate_fe/dist/real_estate_fe/:/usr/share/nginx/html/
         depends_on:
             - backend
-
+            
+          
     mariadb:
        image: mariadb:10.4.32
-       container_name: real_estate_db
        restart: always
        environment:
-         MYSQL_DATABASE: 'real_estate'
-         MYSQL_ROOT_PASSWORD: 'admin'
+         MYSQL_DATABASE: real_estate
+         MYSQL_ROOT_PASSWORD: admin
          MYSQL_ROOT_HOST: '%'
        ports:
-         - '3306:3306'
-       expose:
-         - '3306'
+         - '3307:3306'
+      #  networks: 
+      #   - mysql-db
        volumes:
          - ./db:/docker-entrypoint-initdb.d
          - mariadb:/var/lib/mysql
@@ -46,8 +55,16 @@ services:
        PMA_HOST: mariadb
        PMA_PORT: 3306
        PMA_ARBITRARY: 1
+    #  networks: 
+    #   - mysql-db
      restart: always
      ports:
       - 8081:80
+
+
 volumes:
   mariadb:
+
+# networks: 
+#   mysql-db:
+#       driver: bridge

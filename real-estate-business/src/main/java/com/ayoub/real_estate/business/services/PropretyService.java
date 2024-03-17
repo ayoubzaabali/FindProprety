@@ -20,7 +20,6 @@ import com.ayoub.real_estate.modules.amenity;
 import com.ayoub.real_estate.modules.proprety;
 import com.ayoub.real_estate.modules.args.args;
 import com.ayoub.real_estate.modules.interfaces.propretyAttribute;
-import com.google.protobuf.BoolValueOrBuilder;
 
 
 @Service
