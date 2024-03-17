@@ -24,7 +24,7 @@ A complete stack for running Spring/Spring boot & Angular 16 App into Docker con
    git clone https://github.com/ayoubzaabali/FindProprety
    ```
 
-2. Run `docker-compose up` to check that everything runs correctly Run :
+2. To check that everything runs correctly Run :
    ```
    docker-compose up
    ```  
