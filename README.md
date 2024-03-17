@@ -16,7 +16,8 @@ A complete stack for running Spring/Spring boot & Angular 16 App into Docker con
 - `phpmyadmin` handles the administration of MariaDB.
 
 # Application Structure
-##spring/spring boot
+## spring/spring boot
+
 ![structure](https://github.com/ayoubzaabali/FindProprety/assets/78790570/8cc57bdf-63ff-48c4-87fd-506e2da57b06)
 
   
