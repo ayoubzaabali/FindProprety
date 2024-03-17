@@ -1,4 +1,4 @@
-# 🐳 Docker + Spring/Spring boot +  Angular 16 + Nginx + Mariadb + Tomcat
+# 🐳 Docker + Spring/Spring boot +  Angular 16 + Nginx + Mariadb 
 
 ![stack](https://github.com/ayoubzaabali/FindProprety/assets/78790570/58187b1b-616a-429e-b04c-38f01717a6ee)
 
