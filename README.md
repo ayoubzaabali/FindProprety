@@ -37,7 +37,7 @@ A complete stack for running Spring/Spring boot & Angular 16 App into Docker con
 
 # Testing
 
-0. You need **docker** and **docker-compose** where you are going to launch this so if you do not have it... CLICK HERE [HERE]([https://github.com/Inushin/dockerAngularNginxNodePostgreSQL#installing-docker-and-docker-compose-](https://docs.docker.com/engine/install/))
+0. You need **docker** and **docker-compose** where you are going to launch this so if you do not have it...[ [INSTALL DOCKER ENGINE](https://pages.github.com/)](https://docs.docker.com/engine/install/)
 
 1. Clone this rep.
    ```
