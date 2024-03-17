@@ -31,7 +31,7 @@ A complete stack for running Spring/Spring boot & Angular 16 App into Docker con
 - `real-estate-rest`: contains the REST API endpoints and is connected directly to the other maven modules(business,modules), this part is developed using Spring Boot / Spring MVC
 
 
-## DATABASE SCHEMA
+## Database Schema in UML
   ![Shema](https://github.com/ayoubzaabali/FindProprety/assets/78790570/28e96fcf-8994-4226-a52f-2ad568d80594)
 
 
