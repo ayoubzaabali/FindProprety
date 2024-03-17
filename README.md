@@ -56,11 +56,16 @@ A complete stack for running Spring/Spring boot & Angular 16 App into Docker con
   This will run the container logs in the background.
    
 
-8. To check that everything is running correctly in the background, run:
+4. To check that everything is running correctly in the background, run:
    ```
    docker-compose ps -a
    ```
    and you will see the running containers.
+   
+5. if everything went well:
+   - test the app on http://localhost:4200/
+   - PHPMyAdmin: http://localhost:8081/ (username: root, password: admin)
+   - the database name is 'real_estate'
 
 
 
