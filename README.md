@@ -38,7 +38,7 @@ Real Estate applications using a Complete Stack for Running Spring/Spring boot &
 
 # Testing
 
-0. You need **docker** and **docker-compose** where to launch this stack if you do not have it...[ [INSTALL DOCKER ENGINE](https://docs.docker.com/engine/install/)](https://docs.docker.com/engine/install/)
+0. You need **docker** and **docker-compose** to launch this stack if you do not have it...[ [INSTALL DOCKER ENGINE](https://docs.docker.com/engine/install/)](https://docs.docker.com/engine/install/)
 
 1. Clone this rep.
    ```
