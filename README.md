@@ -8,7 +8,7 @@
 
 ![docker_facebook_share](https://user-images.githubusercontent.com/57062736/139103227-36f3cb32-c3c1-4158-b99e-25a31e955f44.png)
 
-A complete stack for running builded Spring/Spring boot Angular 16 App into Docker containers using docker compose tool, with a proxy Nginx between front and back (conected to the DB container).
+A complete stack for running Spring/Spring boot & Angular 16 App into Docker containers using the docker-compose tool, with a proxy Nginx between front and back (connected to the DB container).
 
 # List of  containers:
 
@@ -17,9 +17,7 @@ A complete stack for running builded Spring/Spring boot Angular 16 App into Dock
 - `mariadb` storing the MariaDB database Tables.
 - `phpmyadmin` handles the administration of MySQL over the Web.
 
-## Installation ⌨
-
-![Docker Installation Illustration](https://user-images.githubusercontent.com/57062736/139102730-d6f51d53-ffb3-44bb-be5e-2bdf48d91295.png)
+## starting the app ⌨
 
 0. You need **Docker** and **Docker Compose** where you are going to launch this so, if you do not have it... click [HERE](https://github.com/Inushin/dockerAngularNginxNodePostgreSQL#installing-docker-and-docker-compose-) or go to the end of this `.md` ^^
 
