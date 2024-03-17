@@ -10,7 +10,7 @@
 
 A complete stack for running builded Spring/Spring boot Angular 16 App into Docker containers using docker compose tool, with a proxy Nginx between front and back (conected to the DB container).
 
-# It is composed of 4 containers:
+# List of  containers:
 
 - `real_estate_fe`, the one that runs the build of Angular APP in a container with Nginx.
 - `backend`, this container is running the business logic using spring JDBC and SQL queries & rest API, this container contains 3 modules (business, modules, rest)
