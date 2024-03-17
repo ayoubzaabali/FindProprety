@@ -50,7 +50,7 @@ Real Estate applications using a Complete Stack for Running Spring/Spring boot &
    docker-compose up
    ```  
 
-3. If there are no errors, stop (`ctrl+C`) and delete containers with :
+3. If there are no errors, stop (`ctrl+C`) and start the containers with :
    ```
    docker-compose up -d
    ```  
