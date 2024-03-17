@@ -14,7 +14,7 @@
         <div *ngIf="properety.for_rent==0" style="color: orange;"><b>For Sale</b></div>
         <div *ngIf="properety.for_rent!=0" style="color: orange;"><b>For Rent</b></div>
 
-        <p class="price mb-3"><span class="orig-price">${{properety.price}}<small>/mo</small></span></p>
+        <p class="price mb-3"><span class="orig-price">${{properety.price}} <small **ngIf="properety.for_rent==1" >/mo</small> </span></p>
 
         <h3 class="mb-0"><a class="mydesc" (click)="handle()" >{{properety.description}}</a></h3>
 

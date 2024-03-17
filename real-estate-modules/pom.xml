@@ -42,7 +42,7 @@
       <resource>
         <directory>${project.basedir}/src/main/resources</directory>
         <includes>
-          <include>/com/ayoub/real_estate/modules/modulesContext.xml</include>
+          <include>modulesContext.xml</include>
         </includes>
       </resource>
     </resources>
