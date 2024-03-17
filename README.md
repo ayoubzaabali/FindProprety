@@ -19,11 +19,11 @@ A complete stack for running Spring/Spring boot & Angular 16 App into Docker con
 
 ![structure](https://github.com/ayoubzaabali/FindProprety/assets/78790570/8cc57bdf-63ff-48c4-87fd-506e2da57b06)
 
-the application has 3 maven modules :
+### the application has 3 maven modules :
 
-real-estate-modules: contains the entities of the app, this part is developed only using Spring Framework
-real-estate-business: contains the business logic of the app, it imports the code of the 'real-estate-modules' module so we can use all the entities here, this part is also developed only using Spring Framework
-real-estate-rest: contains the REST API endpoints and is connected directly to the other maven modules(business,modules), this part is developed using Spring Boot / Spring MVC
+`real-estate-modules`: contains the entities of the app, this part is developed only using Spring Framework
+`real-estate-business`: contains the business logic of the app, it imports the code of the 'real-estate-modules' module so we can use all the entities here, this part is also developed only using Spring Framework
+`real-estate-rest`: contains the REST API endpoints and is connected directly to the other maven modules(business,modules), this part is developed using Spring Boot / Spring MVC
 
 
 ## DATABASE SCHEMA
