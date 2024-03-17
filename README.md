@@ -19,15 +19,13 @@ A complete stack for running Spring/Spring boot & Angular 16 App into Docker con
 
 ## starting the app ⌨
 
-0. You need **Docker** and **Docker Compose** where you are going to launch this so, if you do not have it... click [HERE](https://github.com/Inushin/dockerAngularNginxNodePostgreSQL#installing-docker-and-docker-compose-) or go to the end of this `.md` ^^
+0. You need **Docker** and **Docker Compose** where you are going to launch this so, if you do not have it... click [HERE]([https://github.com/Inushin/dockerAngularNginxNodePostgreSQL#installing-docker-and-docker-compose-](https://docs.docker.com/engine/install/))
 
 1. Clone this rep.
 
-2. Edit the `docker-compose.yml` with your DB information. Notice that the configuration for the Postgres database, has information for another user and DB. In the `01-init.sh` file, that is in `db` dir, there is a configuration for adding the password `postgres` to the postgres user and creating a new DB, called `docker` with a new user with the same name and password. Change if you need to. Apart from this, modifies the `ph_hba.conf` adding `host all all 0.0.0.0/0 md5` so there is no problems with the conection of the database and the users.
+3. Run `docker-compose up` to check that everything runs correctly. If there are no errors, stop (`ctrl+C`) and delete containers with `docker-compose down`. Now you can run it with `docker-compose up -d`. This will run the container logs in the background.
 
-3. Run `docker compose up` to check that everything runs correctly. If there it no errors, stop (`ctrl+C`) and delete containers with `docker compose down`. Now you can run it with `docker compose up -d`. This will run it in the background.
-
-4. To check that eveything is running correctly in the background, run `docker compose ps -a` and you will see the running containers.
+4. To check that everything is running correctly in the background, run `docker-compose ps -a` and you will see the running containers.
 
 ## Docker's useful commands 📑
 
