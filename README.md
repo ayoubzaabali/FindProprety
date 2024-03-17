@@ -1,4 +1,4 @@
-# 🐳 Docker + Spring/Spring boot +  Angular 16 + Nginx + Mariadb
+# 🐳 Docker + Spring/Spring boot +  Angular 16 + Nginx + Mariadb + Tomcat
 
 ![stack](https://github.com/ayoubzaabali/FindProprety/assets/78790570/58187b1b-616a-429e-b04c-38f01717a6ee)
 
@@ -6,7 +6,8 @@
 
 # Description 
 
-A complete stack for running Spring/Spring boot & Angular 16 App into Docker containers using the docker-compose tool, with a proxy Nginx between front and back (connected to the DB container).
+Real Estate applications using a Complete Stack for Running Spring/Spring boot & Angular 16 App into Docker containers using the docker-compose tool, with an Nginx server running the front and Tomcat server in the back (connected to the DB container).
+
 
 # List of  containers:
 
